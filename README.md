@@ -1,4 +1,5 @@
-Descrição do Sistema
+Umidade Forecast System
+
 Objetivo: O sistema fornece uma análise da umidade em uma localização específica, comparando a umidade fornecida pelo usuário com a umidade real obtida de uma API de previsão do tempo (OpenWeather).
 
 
@@ -45,3 +46,11 @@ Compilação e Execução: Compile o código TypeScript para JavaScript usando o
 Exemplo de Requisição
 
 GET http://localhost:3000/forecast?lat=-25.429&lon=-49.271&userHumidity=70
+
+Exemplo de Requisição para  analise de dado 
+
+GET http://localhost:3000/inteligence?stateName=curitiba -- Analise de dados retorna apenas média de temperatura e humidade
+
+Exemplo de Requisição para  checar o clima atual -- retorno de Api
+
+GET http://localhost:3000/today?lat=-25.429&lon=-49.271 -- Retorna um corpo de dados em formato json

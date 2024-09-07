@@ -1,19 +1,19 @@
 
 // Interface geolocation 
-interface Cord {
+export interface Cord {
     lon:  number;
     lat: number;
 }
 
 // Interface for basic weather info
-interface Weather{
+export interface Weather{
     main: String;
     description: String;
     icon: string;
 }
 
-//Interface to return theimportant wheter info
-interface Main {
+// Interface to return theimportant wheter info
+export interface Main {
     temp: number;
     feels_like: number;
     min: number;
@@ -25,19 +25,19 @@ interface Main {
 }
 
 // Interface or wind based data
-interface Wind{
+export interface Wind{
     speed: number;
     deg: number;
 }
 
-// interface for Info
-interface Info{
+// Interface for Info
+export interface Info{
     country: String;
     timeZone: String;
     name: String;
 }
 
-// this interface can be used to retrive more info if needed
+// This interface can be used to retrive more info if needed
 export interface weatherNow{
     cord: Cord;
     weather:  Weather[];
@@ -46,11 +46,11 @@ export interface weatherNow{
     info: Info;
 }
 
-//Interface to return a custom body in the request
+// Interface to return a custom body in the request
 export interface HumidityResponse{
     comparison: string;
-    humidityInfo: {
-        feedback: string,
+    main: {
+        humidity: number,
     }
 }
 
